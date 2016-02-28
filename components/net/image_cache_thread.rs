@@ -18,11 +18,10 @@ use std::fs::File;
 use std::io::Read;
 use std::mem;
 use std::sync::Arc;
-use std::sync::mpsc::{Sender, channel};
+use std::sync::mpsc::{Receiver, Select, Sender, channel};
 use url::Url;
 use util::resource_files::resources_dir_path;
 use util::thread::spawn_named;
-use util::threadpool::ThreadPool;
 use webrender_traits;
 
 ///
